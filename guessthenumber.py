@@ -11,17 +11,17 @@ while wanna_play == False:
     elif yes_no == "no":
         exit()
     else:
-        print("invalid answer")
+        print("Error: invalid answer")
 
 # Game
 computer_number = random.randint(1, 100)
 
 while True:
     try:
-        guess = int(input("Enter your guess: "))
+        guess = int(input("Enter your guess from 1 to 100: "))
     except:
         print("Error: your input is invalid")
-        break
+        continue
 
     if guess == computer_number:
         print("You won!")
@@ -32,6 +32,8 @@ while True:
     elif guess > computer_number:
         print("Number too high")
         continue
+
+quitting_winow = input("Press enter to exit \n\n\n")
         
 
 
