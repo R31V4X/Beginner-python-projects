@@ -23,6 +23,9 @@ while True:
         print("Error: your input is invalid")
         continue
 
+    if guess < 1 or guess > 100:
+        print("Your guess is out of range!")
+        continue
     if guess == computer_number:
         print("You won!")
         break
